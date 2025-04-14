@@ -1,4 +1,4 @@
-package models;
+package co.edu.uceva.proyectoapi.models;
 
 import jakarta.persistence.*;
 

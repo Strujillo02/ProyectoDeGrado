@@ -1,9 +1,9 @@
-package controllers;
+package co.edu.uceva.proyectoapi.controllers;
 
-import models.Usuarios;
+import co.edu.uceva.proyectoapi.models.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import services.UsuarioService;
+import co.edu.uceva.proyectoapi.services.UsuarioService;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,9 @@
-package services;
+package co.edu.uceva.proyectoapi.services;
 
-import models.Usuarios;
+import co.edu.uceva.proyectoapi.models.Usuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.UsuarioRepository;
+import co.edu.uceva.proyectoapi.repositories.UsuarioRepository;
 
 import java.util.ArrayList;
 
