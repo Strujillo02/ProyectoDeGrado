@@ -5,21 +5,47 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "pacientes")
 public class Paciente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "usuario_id", nullable = false)
     private Usuarios usuario;
 
-    public Integer getId() {
-        return id;
+    @Column(name = "estado", length = 45)
+    private String estado;
+
+    @Column(name = "lugar_residencia", length = 150)
+    private String lugarResidencia;
+
+    @Column(name = "tipo_paciente", length = 45)
+    private String tipoPaciente;
+
+    public String getTipoPaciente() {
+        return tipoPaciente;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setTipoPaciente(String tipoPaciente) {
+        this.tipoPaciente = tipoPaciente;
+    }
+
+    public String getLugarResidencia() {
+        return lugarResidencia;
+    }
+
+    public void setLugarResidencia(String lugarResidencia) {
+        this.lugarResidencia = lugarResidencia;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public Usuarios getUsuario() {
@@ -30,4 +56,11 @@ public class Paciente {
         this.usuario = usuario;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
