@@ -1,6 +1,6 @@
-package repositories;
+package co.edu.uceva.proyectoapi.repositories;
 
-import models.Usuarios;
+import co.edu.uceva.proyectoapi.models.Usuarios;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
