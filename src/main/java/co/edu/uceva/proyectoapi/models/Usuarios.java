@@ -8,6 +8,7 @@ import java.util.Set;
 @Entity
 @Table(name = "usuarios")
 public class Usuarios {
+
     @Id
     @Column(name = "id", nullable = false)
     private Integer id;
@@ -39,28 +40,6 @@ public class Usuarios {
 
     @Column(name = "tipo_usuario", length = 50)
     private String tipoUsuario;
-
-    @OneToMany(mappedBy = "usuario")
-    private Set<Medico> medicos = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "usuario")
-    private Set<Paciente> pacientes = new LinkedHashSet<>();
-
-    public Set<Paciente> getPacientes() {
-        return pacientes;
-    }
-
-    public void setPacientes(Set<Paciente> pacientes) {
-        this.pacientes = pacientes;
-    }
-
-    public Set<Medico> getMedicos() {
-        return medicos;
-    }
-
-    public void setMedicos(Set<Medico> medicos) {
-        this.medicos = medicos;
-    }
 
     public String getTipoUsuario() {
         return tipoUsuario;
