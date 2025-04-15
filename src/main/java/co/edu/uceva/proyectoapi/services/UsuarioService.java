@@ -28,6 +28,9 @@ public class UsuarioService {
     public ArrayList<Usuario> obtenerUsuarioPorTipoUsuario(String TipoUsuario){
         return usuarioRepository.findByTipoUsuario(TipoUsuario);
     }
+    public ArrayList<Usuario> obtenerUsuarioPorIdentificacion(String Identificacion){
+        return usuarioRepository.findByIdentificacion(Identificacion);
+    }
 
     public boolean eliminarUsuario(Integer Id){
         try{

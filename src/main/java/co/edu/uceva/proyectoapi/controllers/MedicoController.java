@@ -36,7 +36,7 @@ public class MedicoController {
         if(ok){
             return "Medico eliminado exitosamente";
         }else{
-            return "Medicono se pudo borrar por id "+ id;
+            return "Medico no se pudo borrar por id "+ id;
         }
     }
 }

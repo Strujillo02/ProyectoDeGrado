@@ -16,23 +16,27 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @GetMapping()
-    public ArrayList<Usuario> obtenerUsuarios(){
+    public ArrayList<Usuario> obtenerUsuarios() {
         return usuarioService.obtenerUsuarios();
     }
 
     @PostMapping()
-    public Usuario guardarUsuario(@RequestBody Usuario usuario){
+    public Usuario guardarUsuario(@RequestBody Usuario usuario) {
         return this.usuarioService.guardarUsuario(usuario);
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<Usuario> obtenerUsuarioPorId(@PathVariable("id") Integer id){
+    public Optional<Usuario> obtenerUsuarioPorId(@PathVariable("id") Integer id) {
         return this.usuarioService.obtenerUsuarioPorId(id);
     }
 
-    @GetMapping("/query")
-    public ArrayList<Usuario> obtenerUsuariosPorTipo(@RequestParam("tipoUsuario") String TipoUsuario){
+    @GetMapping("/tipo-usuario")
+    public ArrayList<Usuario> obtenerUsuariosPorTipo(@RequestParam("tipoUsuario") String TipoUsuario) {
         return this.usuarioService.obtenerUsuarioPorTipoUsuario(TipoUsuario);
+    }
+    @GetMapping("/identificacion")
+    public ArrayList<Usuario> obtenerUsuariosPorIdentificacion(@RequestParam("identificacion") String identificacion){
+        return this.usuarioService.obtenerUsuarioPorIdentificacion(identificacion);
     }
 
     @DeleteMapping(path = "/{id}")

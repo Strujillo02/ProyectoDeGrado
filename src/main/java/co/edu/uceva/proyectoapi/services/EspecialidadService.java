@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import co.edu.uceva.proyectoapi.repositories.EspecialidadRepository;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 @Service
 public class EspecialidadService {
@@ -14,5 +15,26 @@ public class EspecialidadService {
 
     public ArrayList<Especialidad> obtenerEspecialidades(){
          return (ArrayList<Especialidad>) especialidadRepository.findAll();
+    }
+
+    public Especialidad guardarEspecialidad(Especialidad  especialidad){
+
+        return especialidadRepository.save(especialidad);
+    }
+
+    public Optional<Especialidad> obtenerEspecialidadPorId(Integer Id){
+
+        return especialidadRepository.findById(Id);
+    }
+
+
+
+    public boolean eliminarEspecialidad(Integer Id){
+        try{
+            especialidadRepository.deleteById(Id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
     }
 }

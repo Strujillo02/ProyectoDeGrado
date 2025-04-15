@@ -21,14 +21,14 @@ public class Usuario {
     @Column(name = "email", length = 45)
     private String email;
 
-    @Column(name = "cedula", length = 45)
-    private String cedula;
+    @Column(name = "identificacion", length = 45)
+    private String identificacion;
 
     @Column(name = "genero", length = 45)
     private String genero;
 
-    @Column(name = "estado")
-    private Byte estado;
+    @Column(name = "estado", length = 45)
+    private String estado;
 
     @Column(name = "tipo_identificacion", length = 45)
     private String tipoIdentificacion;
@@ -63,11 +63,11 @@ public class Usuario {
         this.tipoIdentificacion = tipoIdentificacion;
     }
 
-    public Byte getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(Byte estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
@@ -79,12 +79,12 @@ public class Usuario {
         this.genero = genero;
     }
 
-    public String getCedula() {
-        return cedula;
+    public String getIdentificacion() {
+        return identificacion;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public String getEmail() {

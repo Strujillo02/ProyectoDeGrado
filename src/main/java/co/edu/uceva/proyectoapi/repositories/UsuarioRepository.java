@@ -9,4 +9,5 @@ import java.util.ArrayList;
 @Repository
 public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
     public abstract ArrayList<Usuario> findByTipoUsuario(String tipoUsuario);
+    public abstract ArrayList<Usuario> findByIdentificacion(String tipoUsuario);
 }
