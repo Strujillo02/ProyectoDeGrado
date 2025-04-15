@@ -1,6 +1,6 @@
 package co.edu.uceva.proyectoapi.services;
 
-import co.edu.uceva.proyectoapi.models.Usuarios;
+import co.edu.uceva.proyectoapi.models.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import co.edu.uceva.proyectoapi.repositories.UsuarioRepository;
@@ -13,19 +13,19 @@ public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
 
-    public ArrayList<Usuarios> obtenerUsuarios(){
-        return (ArrayList<Usuarios>) usuarioRepository.findAll();
+    public ArrayList<Usuario> obtenerUsuarios(){
+        return (ArrayList<Usuario>) usuarioRepository.findAll();
     }
 
-    public Usuarios guardarUsuario(Usuarios usuario){
+    public Usuario guardarUsuario(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
 
-    public Optional<Usuarios> obtenerUsuarioPorId(Integer Id){
+    public Optional<Usuario> obtenerUsuarioPorId(Integer Id){
         return usuarioRepository.findById(Id);
     }
 
-    public ArrayList<Usuarios> obtenerUsuarioPorTipoUsuario(String TipoUsuario){
+    public ArrayList<Usuario> obtenerUsuarioPorTipoUsuario(String TipoUsuario){
         return usuarioRepository.findByTipoUsuario(TipoUsuario);
     }
 

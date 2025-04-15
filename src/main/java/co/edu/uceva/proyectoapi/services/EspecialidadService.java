@@ -1,6 +1,6 @@
 package co.edu.uceva.proyectoapi.services;
 
-import co.edu.uceva.proyectoapi.models.Especialidades;
+import co.edu.uceva.proyectoapi.models.Especialidad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import co.edu.uceva.proyectoapi.repositories.EspecialidadRepository;
@@ -12,7 +12,7 @@ public class EspecialidadService {
     @Autowired
     EspecialidadRepository especialidadRepository;
 
-    public ArrayList<Especialidades> obtenerEspecialidades(){
-         return (ArrayList<Especialidades>) especialidadRepository.findAll();
+    public ArrayList<Especialidad> obtenerEspecialidades(){
+         return (ArrayList<Especialidad>) especialidadRepository.findAll();
     }
 }

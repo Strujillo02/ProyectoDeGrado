@@ -20,7 +20,7 @@ public class Cita {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "especialidade_id", nullable = false)
-    private Especialidades especialidade;
+    private Especialidad especialidade;
 
     @Column(name = "fecha_registro")
     private Instant fechaRegistro;
@@ -110,11 +110,11 @@ public class Cita {
         this.fechaRegistro = fechaRegistro;
     }
 
-    public Especialidades getEspecialidade() {
+    public Especialidad getEspecialidade() {
         return especialidade;
     }
 
-    public void setEspecialidade(Especialidades especialidade) {
+    public void setEspecialidade(Especialidad especialidade) {
         this.especialidade = especialidade;
     }
 

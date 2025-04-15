@@ -2,12 +2,9 @@ package co.edu.uceva.proyectoapi.models;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "usuarios")
-public class Usuarios {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

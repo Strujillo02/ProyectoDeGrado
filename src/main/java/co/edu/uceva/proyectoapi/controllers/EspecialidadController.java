@@ -1,6 +1,6 @@
 package co.edu.uceva.proyectoapi.controllers;
 
-import co.edu.uceva.proyectoapi.models.Especialidades;
+import co.edu.uceva.proyectoapi.models.Especialidad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,7 @@ public class EspecialidadController {
     EspecialidadService especialidadService;
 
     @GetMapping
-    public ArrayList<Especialidades> obtenerEspecialidades(){
+    public ArrayList<Especialidad> obtenerEspecialidades(){
         return especialidadService.obtenerEspecialidades();
     }
 }
