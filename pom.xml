@@ -11,7 +11,7 @@
     <groupId>co.edu.uceva</groupId>
     <artifactId>proyectoApi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>proyectoApi</name>
     <description>proyectoApi</description>
     <url></url>
