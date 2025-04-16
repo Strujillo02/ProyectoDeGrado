@@ -1,1 +1,0 @@
-el docker-compose.yml debe estar por fuera de la carpeta
