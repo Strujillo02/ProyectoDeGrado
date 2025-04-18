@@ -33,8 +33,8 @@ public class Usuario {
     @Column(name = "tipo_identificacion", length = 45)
     private String tipoIdentificacion;
 
-    @Column(name = "`contraseña`")
-    private String contraseña;
+    @Column(name = "contrasena")
+    private String contrasena;
 
     @Column(name = "tipo_usuario", length = 50)
     private String tipoUsuario;
@@ -47,12 +47,12 @@ public class Usuario {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getTipoIdentificacion() {
