@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import co.edu.uceva.proyectoapi.services.UsuarioService;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -64,5 +65,9 @@ public  class UsuarioController {
     public Usuario Login(@RequestBody Usuario usuario) {
         Usuario oldUSuario = usuarioRepository.findByTipoUsuarioAndContrasenaAndIdentificacion(usuario.getTipoUsuario(), usuario.getContrasena(), usuario.getIdentificacion());
         return oldUSuario;
+    }
+    @GetMapping("/usuario")
+    public List<Usuario> getAllUsuarios() {
+        return usuarioRepository.findAll();
     }
 }
