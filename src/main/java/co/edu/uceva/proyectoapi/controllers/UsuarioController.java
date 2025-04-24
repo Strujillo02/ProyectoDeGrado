@@ -1,6 +1,7 @@
 package co.edu.uceva.proyectoapi.controllers;
 
 import co.edu.uceva.proyectoapi.models.Usuario;
+import co.edu.uceva.proyectoapi.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import co.edu.uceva.proyectoapi.services.UsuarioService;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/usuario")
+/*@RequestMapping("/usuario")
 
 public class UsuarioController {
     @Autowired
@@ -47,5 +48,21 @@ public class UsuarioController {
         }else{
             return "Usuario no eliminado con id "+ id;
         }
+    }
+}*/
+
+public  class UsuarioController {
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    @PostMapping("/register")
+    public Usuario Register(@RequestBody Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    @PostMapping("/login")
+    public Usuario Login(@RequestBody Usuario usuario) {
+        Usuario oldUSuario = usuarioRepository.findByTipoUsuarioAndContrasenaAndIdentificacion(usuario.getTipoUsuario(), usuario.getContrasena(), usuario.getIdentificacion());
+        return oldUSuario;
     }
 }

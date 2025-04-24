@@ -12,32 +12,4 @@ import java.util.Optional;
 public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
-
-    public ArrayList<Usuario> obtenerUsuarios(){
-        return (ArrayList<Usuario>) usuarioRepository.findAll();
-    }
-
-    public Usuario guardarUsuario(Usuario usuario){
-        return usuarioRepository.save(usuario);
-    }
-
-    public Optional<Usuario> obtenerUsuarioPorId(Integer Id){
-        return usuarioRepository.findById(Id);
-    }
-
-    public ArrayList<Usuario> obtenerUsuarioPorTipoUsuario(String TipoUsuario){
-        return usuarioRepository.findByTipoUsuario(TipoUsuario);
-    }
-    public ArrayList<Usuario> obtenerUsuarioPorIdentificacion(String Identificacion){
-        return usuarioRepository.findByIdentificacion(Identificacion);
-    }
-
-    public boolean eliminarUsuario(Integer Id){
-        try{
-            usuarioRepository.deleteById(Id);
-            return true;
-        }catch(Exception err){
-            return false;
-        }
-    }
 }
